@@ -1,0 +1,5 @@
+FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build-env
+COPY . ./
+WORKDIR /Server_TwinCAT/POUs/
+RUN mcr.microsoft.com/dotnet/sdk:3.1 AS build-env MAIN.TcPOU -o out
+CMD ["./MAIN.TcPOU"]
