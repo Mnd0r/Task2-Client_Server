@@ -1,0 +1,4 @@
+FROM python:latest
+ADD CompB_client.py /Client_python/
+WORKDIR /Client_python/
+CMD ["python", "-u", "CompB_client.py"]
